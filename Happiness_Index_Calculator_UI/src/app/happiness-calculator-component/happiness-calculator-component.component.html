@@ -1,0 +1,23 @@
+<H1>Happiness Index Calculated</H1>
+<label>Enter name:</label>
+<!--<input type="text" [(ngModel)]="name" (input)="onSearchInput()">-->
+
+<form (submit)="onFormSubmit()">
+  <label for="search-input">Search:</label>
+  <input type="text" id="search-input" [(ngModel)]="name" name="Ashok">
+  <button type="submit">Search</button>
+</form>
+
+<!-- my-component.component.html -->
+<div>
+  <h2>List</h2>
+<ul>
+  <li *ngFor="let entry of dataMapArray">{{ entry[0] }}: {{ entry[1] }}</li>
+</ul>
+</div>
+
+<div>
+  <h2>Chart</h2>
+<canvas #myChart></canvas>
+</div>
+
